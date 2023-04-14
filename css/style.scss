@@ -1,3 +1,8 @@
+.corrige{ background-color: #ce1e1e;}
+.branco{ background-color: #e9dede;}
+.confirma{ background-color: #41ce1e;}
+.bold{ font-weight: 600;}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,21 +11,51 @@
     outline: 1px solid #000;
 }
 
-.body{
-    margin: 0 auto;
+body{
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
 }
 
 .urna{
     height: 90vh;
     width: 40vw;
-    display: grid;
-    margin: 0 auto;
+    padding-top: 1rem;
+    background-color: #f7f4f0;
 
     .tela{
+        margin: 10px;
+        margin-bottom: 20px;
+        background-color: #fff;
 
     }
+
     .teclado{
         display: flex;
 
+        .comandos{
+            display: grid;
+            gap: 1rem;
+
+            padding: 1rem;
+
+            .btn{
+                padding: .7rem;
+            }
+        }
+
+        .numerico{
+            width: 100%;
+            padding: 10px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+
+            .btn{
+                width: 25%;
+            }
+        }
     }
 }
