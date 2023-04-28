@@ -1,0 +1,83 @@
+.corrige {
+  background-color: #ce1e1e;
+}
+
+.branco {
+  background-color: #e9dede;
+}
+
+.confirma {
+  background-color: #41ce1e;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+body .candidatos {
+  height: 90vh;
+  padding: 1rem;
+  margin-top: 20px;
+}
+
+.urna {
+  height: 90vh;
+  min-width: 600px;
+  padding-top: 1rem;
+  background-color: #f7f4f0;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.4);
+}
+.urna .tela {
+  margin: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  height: 60%;
+  margin: 1px solid rgba(0, 0, 0, 0.7058823529);
+}
+.urna .btn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: 0px 3px 3px 0px solid rgba(0, 0, 0, 0.2980392157);
+}
+.urna .teclado {
+  display: flex;
+  margin: 0 10px 0 10px;
+}
+.urna .teclado .comandos {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(90deg, rgb(241, 244, 220) 0%, rgb(242, 240, 222) 100%);
+}
+.urna .teclado .comandos .btn {
+  padding: 0.7rem;
+}
+.urna .teclado .numerico {
+  display: flex;
+  width: 100%;
+  padding: 10px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgb(37, 37, 37) 0%, rgb(78, 78, 78) 100%);
+}
+.urna .teclado .numerico .btn {
+  width: 25%;
+}/*# sourceMappingURL=style.css.map */
