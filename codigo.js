@@ -1,16 +1,29 @@
-var numInput = document.getElementById("number");
-var voteRow = [5, 3, 2];
+var voteRow = [];
+
+function atualizaNumeros() 
+{
+    var numInput = document.getElementById("number").value;
+    document.getElementById("display1").value = numInput.slice(0);
+    document.getElementById("display2").value = numInput.slice(1);
+    document.getElementById("display3").value = numInput.slice(2);
+    document.getElementById("display4").value = numInput.slice(3);
+    document.getElementById("display5").value = numInput.slice(4);
+}
 
 function digita(num)
 {
-    numInput.value = num;
+    var numInput = document.getElementById("number").value;
+    document.getElementById("number").value = numInput + num;
+    atualizaNumeros;
 }
 
-window.onload = function()
-{   
-    for(var c = 0; c >= 2; c++)
-    {
+function corrige()
+{
+    document.getElementById("number").value = null;
+}
 
-    }
+function branco()
+{
+
 }
 
