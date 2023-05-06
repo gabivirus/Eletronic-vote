@@ -33,7 +33,7 @@
 
         $data = json_decode($response, true);
         if (isset($data['erro'])){
-            echo '<'
+            echo '<';
         }
     }
 

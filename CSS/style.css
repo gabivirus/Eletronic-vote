@@ -67,4 +67,12 @@ body .candidatos {
 }
 .urna .teclado .numerico .btn {
   width: 25%;
+}
+
+/*////////////////////////////////////INDEX//////////////////////////////*/
+.coletar_cpf form {
+  display: grid;
+}
+.coletar_cpf form label {
+  background-color: #ce1e1e;
 }/*# sourceMappingURL=style.css.map */
