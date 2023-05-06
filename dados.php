@@ -2,18 +2,40 @@
     $servername = "127.0.0.1 3307";
     $username = "root";
     $password = "1234";
-    $conn = mysqli_connect($servername, $username, $password);
+    $base = "votacao";//dbname
+    $conn = mysqli_connect($servername, $username, $password, $base);
 
+    //TESTE
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    echo "Connected successfully";
+
+    else{
+        echo "Connected successfully";
+    }
+
+    $sqlq = "SELECT * FROM table_name";
+
+    $result = mysqli_query($conn, $sqlq);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo $row["nome"];
+    }
+    //
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        echo "<h4 name='title' class='titulo'>title</h4>";
-        echo "<h3 name='name' class='nome'>name</h3>";
-        echo "<img name='img' src=' alt='>";
-        echo "<h3 name='number' class='numero'>number</h3>";
-        echo "<h5 name='party' class='partido'>party</h5>";
+        $cpf = $_POST['cpf'];
+        $url = "https://www.receitaws.com.br/v1/cnpj/{$cpf}";
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        $data = json_decode($response, true);
+        if (isset($data['erro'])){
+            echo '<'
+        }
     }
+
+    mysqli_close($conn);
 ?>
