@@ -1,0 +1,8 @@
+CREATE DATABASE urna;
+
+CREATE TABLE voteTime(
+    id INT(2) AUTO_INCREMENT PRIMARY KEY,
+    startTime DATETIME,
+    endTime DATETIME
+);
+
